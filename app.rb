@@ -12,9 +12,11 @@ class App < Sinatra::Base
   end
 
   get "/say/:number/:phrase" do
-    @num = params[:number].to_f
+    @num = params[:number].to_i
     @phrase = params[:phrase].scan(/\w+/)
-    binding.pry
-
+    @num * "#{@phrase.join(" ")}"
+    @num.times do
+      puts "#{@phrase.join(" ")}"
+    end
   end
 end
