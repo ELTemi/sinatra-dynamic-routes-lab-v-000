@@ -12,7 +12,7 @@ class App < Sinatra::Base
   end
 
   get "/say/:number/:phrase" do
-    @num = params[:number].to_i
+    @num = params[:number].to_f
     @phrase = params[:phrase].split("%20")
     binding.pry
      @num.times do
