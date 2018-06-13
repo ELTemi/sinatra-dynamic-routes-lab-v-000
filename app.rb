@@ -16,7 +16,7 @@ class App < Sinatra::Base
     @phrase = params[:phrase].split("%20")
     binding.pry
      @num.times do
-       puts "#{@phrase.join(" ")}"
+       "#{@phrase.join(" ")}"
      end
   end
 end
