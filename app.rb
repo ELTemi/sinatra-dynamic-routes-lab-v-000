@@ -16,7 +16,7 @@ class App < Sinatra::Base
     @phrase = params[:phrase].scan(/\w+/)
     binding.pry
     @num.times do
-      "#{@phrase.join(" ")}"
+      puts "#{@phrase.join(" ")}"
     end
   end
 end
