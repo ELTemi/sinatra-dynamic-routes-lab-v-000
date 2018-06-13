@@ -15,6 +15,6 @@ class App < Sinatra::Base
     @num = params[:number].to_f
     @phrase = params[:phrase].scan("%20")
     binding.pry
-     
+
   end
 end
