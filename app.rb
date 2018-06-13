@@ -13,7 +13,7 @@ class App < Sinatra::Base
 
   get "/say/:number/:phrase" do
     @num = params[:number].to_f
-    @phrase = params[:phrase].scan("%20")
+    @phrase = params[:phrase].scan(/\w+/)
     binding.pry
 
   end
