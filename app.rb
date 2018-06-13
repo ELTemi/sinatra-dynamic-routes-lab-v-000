@@ -13,10 +13,8 @@ class App < Sinatra::Base
 
   get "/say/:number/:phrase" do
     @num = params[:number].to_f
-    @phrase = params[:phrase].split("%20")
+    @phrase = params[:phrase].scan("%20")
     binding.pry
-     @num.times do
-       "#{@phrase.join(" ")}"
-     end
+     
   end
 end
