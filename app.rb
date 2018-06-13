@@ -14,7 +14,7 @@ class App < Sinatra::Base
   get "/say/:number/:phrase" do
     @num = params[:number].to_i
     @phrase = params[:phrase].split("%20")
-     5.times do
+     5.to_i.times do
        puts "#{@phrase.join(" ")}"
      end
   end
